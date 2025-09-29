@@ -1,0 +1,7 @@
+hw2/ams562_hw2
+*.out
+*.o
+*.exe
+test_output.txt
+extra_test_output.txt
+.DS_Store
