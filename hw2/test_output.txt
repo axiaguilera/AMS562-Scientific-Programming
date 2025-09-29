@@ -1,0 +1,34 @@
+Select an option (0 to exit):
+1. Check if a number is divisible by another
+2. Check if a number is prime
+3. Print prime factorization of a number
+4. Print first N prime numbers
+Enter your choice: Enter a number: Enter a divisor: 4 is a divisor of 12
+Select an option (0 to exit):
+1. Check if a number is divisible by another
+2. Check if a number is prime
+3. Print prime factorization of a number
+4. Print first N prime numbers
+Enter your choice: Enter a number: 17 is prime
+Select an option (0 to exit):
+1. Check if a number is divisible by another
+2. Check if a number is prime
+3. Print prime factorization of a number
+4. Print first N prime numbers
+Enter your choice: Enter a number: Prime factors: 2 3 3 
+Select an option (0 to exit):
+1. Check if a number is divisible by another
+2. Check if a number is prime
+3. Print prime factorization of a number
+4. Print first N prime numbers
+Enter your choice: How many primes to print? 2
+3
+5
+7
+11
+Select an option (0 to exit):
+1. Check if a number is divisible by another
+2. Check if a number is prime
+3. Print prime factorization of a number
+4. Print first N prime numbers
+Enter your choice: Exiting...
