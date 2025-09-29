@@ -86,7 +86,7 @@ void print_primes(int n) {
     // TODO: Implement this 
     
     // Boundary case
-    if(n<=0) return "\n";
+    if(n<=0) return;
     
     std::cout << 2 << "\n"; // Print the first prime number
     int count = 1;
