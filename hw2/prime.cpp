@@ -5,8 +5,6 @@
 
 // Check if divisor divides number exactly
 bool is_divisor(int number, int divisor) {
-    // TODO: Implement this function
-
     // Boundary case: Division by zero is not defined
     if(divisor == 0) return false; 
 
@@ -15,9 +13,7 @@ bool is_divisor(int number, int divisor) {
 }
 
 // Check if a number is prime by testing divisibility up to sqrt(number)
-bool is_prime(int number) {
-    // TODO: Implement this function
-    
+bool is_prime(int number) {    
     // Boundary cases
     if(number <= 1) return false;
     if(number == 2) return true;    
@@ -36,13 +32,11 @@ bool is_prime(int number) {
 
 // Print prime factors of a number directly
 void print_prime_factors(int number) {
-    // TODO: Implement this function
-
     //Boundary case
-    if(number <= 1){
-        std::cout << "No prime factors for numbers less than or equal to 1." << std::endl;
+    if (number <= 1) { 
+        std::cout << '\n'; 
         return; 
-    } 
+    }
 
     // Check if number is prime (prime factor is the number itself)
     if(is_prime(number)){
@@ -54,13 +48,14 @@ void print_prime_factors(int number) {
     int temp_half = ceil(temp / 2);
     int factor = 2;
     
-    // Check for prime factors from 2 to number/2
+    // Check for prime factors from 2 to temp/2
     while(temp > 1 && factor <= temp_half){
         // If factor is a divisor and prime, print it and reduce temp
         if(is_divisor(temp, factor) && is_prime(factor)){
             std::cout << factor << " ";
             temp = temp / factor;
             bool flag = true;
+            // Check for multiple occurrences of the same prime factor
             while(temp % factor == 0){
                 if(flag) std::cout << factor << " ";
                 else flag = false;
@@ -82,22 +77,25 @@ void print_prime_factors(int number) {
 }
 
 // Print the first n prime numbers
-void print_primes(int n) {
-    // TODO: Implement this 
-    
+void print_primes(int n) {    
     // Boundary case
-    if(n<=0) return;
-    
-    std::cout << 2 << "\n"; // Print the first prime number
+    if (n <= 0) {
+        std::cout << "\n";
+        return;
+    }
+     
+    // Print 2 as the first prime number
+    std::cout << 2 << "\n"; 
     int count = 1;
-
+    
+    // Check only odd numbers starting from 3
     int candidate = 3;
     while(count < n){
         if(is_prime(candidate)){
             std::cout << candidate << "\n";
             ++count;
         }
-        candidate+= 2; // Check only odd numbers
+        candidate+= 2; 
     
     }
 }
