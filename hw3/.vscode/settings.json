@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "stdexcept": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "initializer_list": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "typeinfo": "cpp",
+        "__verbose_abort": "cpp",
+        "cmath": "cpp",
+        "cstdint": "cpp",
+        "cwctype": "cpp",
+        "execution": "cpp",
+        "iosfwd": "cpp",
+        "variant": "cpp",
+        "cstddef": "cpp",
+        "algorithm": "cpp"
+    }
+}
