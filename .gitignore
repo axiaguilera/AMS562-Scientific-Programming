@@ -14,3 +14,8 @@ docs/
 
 # macOS system files
 .DS_Store
+
+# Ignore compiled binary and Doxygen output
+hw3/hw3_tests
+hw3/html/
+hw3/latex/
