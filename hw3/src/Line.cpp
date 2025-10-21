@@ -22,7 +22,7 @@ double Line::slope() const {
     double dx = point2.getX() - point1.getX();
 
     if (dx == 0) {
-        throw std::runtime_error("Vertical lines has undefined slope.");
+        throw std::runtime_error("Vertical lines have undefined slope.");
     }
     
     return dy / dx;
@@ -30,7 +30,7 @@ double Line::slope() const {
 
 double Line::y_intercept() const {
     if (point1.getX() == point2.getX()) {
-        throw std::runtime_error("Vertical lines does not have y-intercept");
+        throw std::runtime_error("Vertical lines does not have y-intercept.");
     } 
     
     return point1.getY() - slope() * point1.getX();

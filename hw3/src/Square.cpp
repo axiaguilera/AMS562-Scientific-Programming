@@ -1,4 +1,5 @@
 #include "Square.h"
+#include <cmath>
 #include <stdexcept>
 
 Square::Square(const Point& point, double side_length) : 

@@ -1,7 +1,16 @@
-hw2/ams562_hw2
+# C++ build artifacts from hw2 and hw3
 *.out
 *.o
 *.exe
+hw2/ams562_hw2
+hw3_tests
+
+# Test output files
 test_output.txt
 extra_test_output.txt
+
+# Ignore Doxygen generated documentation output
+docs/
+
+# macOS system files
 .DS_Store

@@ -23,9 +23,62 @@ The project is organized into the following directory structure:
 - `Makefile`: For compiling the project using `g++`.
 - `README.md`: This documentation file.
 
+---
+
 ## Compilation Instructions
 
-To compile the project, you need to have `g++` and `make` installed. Navigate to the project's root directory in your terminal and run the following command:
+This project is built using **GNU Make** and **g++**.
 
-```sh
+1.  Ensure `g++` and `make` are installed on your system.
+2.  Navigate to the root directory of the project.
+3.  Run the following command to compile all files:
+
+```bash
 make
+```
+
+This command compiles all source files and generates an executable named: `hw3_tests`.
+
+If you need to remove all compiled files, use:
+
+```bash
+make clean
+```
+
+Once the project has been successfully compiled, run the following command to execute all unit tests:
+
+```bash
+./hw3_tests
+```
+
+Each test case prints a confirmation message indicating whether it PASSED or raised an exception correctly.
+
+
+## Doxygen Documentation
+
+This project uses Doxygen-style comments in all header files to provide detailed documentation of classes, member functions, and exception behavior.
+To generate the documentation:
+1. Make sure Doxygen and graphviz is installed.
+- On macOS: brew install doxygen, brew install graphviz
+- On Linux: sudo apt install doxygen, sudo apt install graphviz
+2. From the project root, run:
+
+```bash
+doxygen -g Doxyfile
+doxygen Doxyfile
+```
+
+3. Open the generated HTML documentation:
+
+```bash
+open html/index.html
+```
+
+This will display a navigable interface containing the API reference for all classes and methods, suitable for submission or inclusion in your GitHub Pages.
+
+## Author and Course Information
+Course: AMS 562 — Scientific Programming in C++
+Assignment: Homework 3 — OOP in C++
+Author: Axi Fabricio Aguilera
+Institution: Stony Brook University, Department of Applied Mathematics and Statistics
+Date: October 2025
