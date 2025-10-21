@@ -74,11 +74,11 @@ doxygen Doxyfile
 open html/index.html
 ```
 
-This will display a navigable interface containing the API reference for all classes and methods, suitable for submission or inclusion in your GitHub Pages.
+This will display a navigable interface containing the API reference for all classes and methods.
 
 ## Author and Course Information
-Course: AMS 562 — Scientific Programming in C++
-Assignment: Homework 3 — OOP in C++
-Author: Axi Fabricio Aguilera
-Institution: Stony Brook University, Department of Applied Mathematics and Statistics
-Date: October 2025
+- Course: AMS 562 — Scientific Programming in C++
+- Assignment: Homework 3 — OOP in C++
+- Author: Axi Fabricio Aguilera
+- Institution: Stony Brook University, Department of Applied Mathematics and Statistics
+- Date: October 2025
