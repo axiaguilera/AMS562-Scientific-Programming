@@ -71,7 +71,7 @@ doxygen Doxyfile
 3. Open the generated HTML documentation:
 
 ```bash
-open html/index.html
+open docs/html/index.html
 ```
 
 This will display a navigable interface containing the API reference for all classes and methods.
