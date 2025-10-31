@@ -1,0 +1,100 @@
+\chapter{C++ Scientific Computing Classes }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{C++ Scientific Computing Classes@{C++ Scientific Computing Classes}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Project Overview}{Project Overview}}\label{md__r_e_a_d_m_e_autotoc_md1}
+This project is a suite of C++ classes that model fundamental scientific entities\+: {\ttfamily Point}, {\ttfamily Line}, {\ttfamily Rectangle}, and {\ttfamily Square}. These classes are designed with Object-\/\+Oriented Programming (OOP) principles and can be utilized in various scientific computing applications, such as simulations and data analysis. The project also includes a comprehensive set of unit tests to ensure code reliability and correctness.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{File Structure}{File Structure}}\label{md__r_e_a_d_m_e_autotoc_md2}
+The project is organized into the following directory structure\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily include/}\+: Contains all the header files ({\ttfamily .h}) for the classes.
+\begin{DoxyItemize}
+\item {\ttfamily Point.\+h}\+: Declaration of the {\ttfamily Point} class.
+\item {\ttfamily Line.\+h}\+: Declaration of the {\ttfamily Line} class.
+\item {\ttfamily Rectangle.\+h}\+: Declaration of the {\ttfamily Rectangle} class.
+\item {\ttfamily Square.\+h}\+: Declaration of the {\ttfamily Square} class.
+\end{DoxyItemize}
+\item {\ttfamily src/}\+: Contains all the implementation files ({\ttfamily .cpp}) for the classes.
+\begin{DoxyItemize}
+\item {\ttfamily Point.\+cpp}\+: Implementation of the {\ttfamily Point} class.
+\item {\ttfamily Line.\+cpp}\+: Implementation of the {\ttfamily Line} class.
+\item {\ttfamily Rectangle.\+cpp}\+: Implementation of the {\ttfamily Rectangle} class.
+\item {\ttfamily Square.\+cpp}\+: Implementation of the {\ttfamily Square} class.
+\end{DoxyItemize}
+\item {\ttfamily tests/}\+: Contains the unit tests.
+\begin{DoxyItemize}
+\item {\ttfamily tests.\+cpp}\+: Unit tests for all classes.
+\end{DoxyItemize}
+\item {\ttfamily Makefile}\+: For compiling the project using {\ttfamily g++}.
+\item {\ttfamily README.\+md}\+: This documentation file.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Compilation Instructions}{Compilation Instructions}}\label{md__r_e_a_d_m_e_autotoc_md4}
+This project is built using {\bfseries{GNU Make}} and {\bfseries{g++}}.
+
+
+\begin{DoxyEnumerate}
+\item Ensure {\ttfamily g++} and {\ttfamily make} are installed on your system.
+\item Navigate to the root directory of the project.
+\item Run the following command to compile all files\+:
+
+{\ttfamily bash make }
+\end{DoxyEnumerate}
+
+This command compiles all source files and generates an executable named\+: {\ttfamily hw3\+\_\+tests}.
+
+If you need to remove all compiled files, use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ }
+
+\end{DoxyCode}
+
+
+Once the project has been successfully compiled, run the following command to execute all unit tests\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./hw3\_tests}
+
+\end{DoxyCode}
+
+
+Each test case prints a confirmation message indicating whether it PASSED or raised an exception correctly.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Doxygen Documentation}{Doxygen Documentation}}\label{md__r_e_a_d_m_e_autotoc_md5}
+This project uses Doxygen-\/style comments in all header files to provide detailed documentation of classes, member functions, and exception behavior. To generate the documentation\+:
+\begin{DoxyEnumerate}
+\item Make sure Doxygen is installed.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item On mac\+OS\+: brew install doxygen
+\item On Linux\+: sudo apt install doxygen
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item From the project root, run\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen\ -\/g\ Doxyfile}
+\DoxyCodeLine{doxygen\ Doxyfile}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Open the generated HTML documentation\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{open\ html/index.html}
+
+\end{DoxyCode}
+
+
+This will display a navigable interface containing the API reference for all classes and methods, suitable for submission or inclusion in your Git\+Hub Pages.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Author and Course Information}{Author and Course Information}}\label{md__r_e_a_d_m_e_autotoc_md6}
+Course\+: AMS 562 — Scientific Programming in C++ Assignment\+: Homework 3 — OOP in C++ Author\+: Axi Fabricio Aguilera Institution\+: Stony Brook University, Department of Applied Mathematics and Statistics Date\+: October 2025 
