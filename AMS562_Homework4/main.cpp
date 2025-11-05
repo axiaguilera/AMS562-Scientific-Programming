@@ -100,7 +100,7 @@ int main() {
     Vector<double> rank_vec(N);
 
     // Alpha (damping factor)
-    double alpha = 0.85; // No teleportation for this test case
+    double alpha = 1; // No teleportation for this test case
     
     // Compute the PageRank
     pageRank(M, rank_vec, alpha);
