@@ -1,0 +1,11 @@
+# Build artifacts
+*.o
+pagerank_calculator
+pagerank_example
+
+# Generated documentation
+docs/
+
+# Doxygen logs
+*.log
+
