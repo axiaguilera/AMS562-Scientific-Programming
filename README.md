@@ -6,6 +6,7 @@ Each homework is organized in its own folder with source code, a Makefile, and a
 - [HW1](hw1/)
 - [HW2](hw2/)
 - [HW3](hw3/)
+- [HW4](hw4/)
   
 
 ## Course Information
