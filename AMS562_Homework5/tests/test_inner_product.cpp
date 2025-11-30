@@ -1,3 +1,5 @@
+// tests/test_inner_product.cpp
+
 // Overview:
 // This file contains unit tests for verifying the correctness and performance
 // of different implementations of the inner product function using Google Test framework.
@@ -43,6 +45,10 @@ TEST(InnerProductTest, CorrectnessTest_OpenMP) {
     std::vector<double> b(1000, 2.0);
 
     // TODO: Implement correctness test for parallel_inner_product_openmp
+    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+    double result_openmp = parallel_inner_product_openmp(a, b);
+
+    EXPECT_DOUBLE_EQ(expected, result_openmp);
 }
 
 // Large Vectors Test for Threads
@@ -74,4 +80,15 @@ TEST(InnerProductTest, LargeVectorsTest_OpenMP) {
     std::vector<double> b(n, 2.0);
 
     // TODO: Implement large vectors test for parallel_inner_product_openmp
+    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+
+    double openmp_time = measure_time([&]() {
+        parallel_inner_product_openmp(a, b);
+    });
+
+    double result_openmp = parallel_inner_product_openmp(a, b);
+
+    EXPECT_DOUBLE_EQ(expected, result_openmp);
+
+    std::cout << "\nAverage execution time for OpenMP (ms): " << openmp_time << "\n";
 }

@@ -1,3 +1,5 @@
+# cmake/openmp_config.cmake
+
 if(CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/homebrew/opt/libomp /usr/local)
     find_package(OpenMP)

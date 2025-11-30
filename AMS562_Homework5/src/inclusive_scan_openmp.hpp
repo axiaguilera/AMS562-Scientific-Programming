@@ -1,3 +1,5 @@
+// src/inclusive_scan_openmp.hpp
+
 #ifndef INCLUSIVE_SCAN_OPENMP_HPP
 #define INCLUSIVE_SCAN_OPENMP_HPP
 

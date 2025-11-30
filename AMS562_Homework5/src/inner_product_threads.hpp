@@ -1,3 +1,5 @@
+// src/inner_product_threads.hpp
+
 #ifndef INNER_PRODUCT_THREADS_HPP
 #define INNER_PRODUCT_THREADS_HPP
 
