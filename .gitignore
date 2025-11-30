@@ -19,3 +19,6 @@ docs/
 hw3/hw3_tests
 hw3/html/
 hw3/latex/
+
+# CMake / build directories
+AMS562_Homework5/build/
