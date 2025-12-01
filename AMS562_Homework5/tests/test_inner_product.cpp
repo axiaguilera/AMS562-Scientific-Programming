@@ -59,16 +59,24 @@ TEST(InnerProductTest, LargeVectorsTest_Threads) {
     std::vector<double> a(n, 1.0);
     std::vector<double> b(n, 2.0);
 
-    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+    // Measure execution times
+    double std_time = measure_time([&]() {
+        std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+    });
     double threads_time = measure_time([&]() {
         parallel_inner_product_threads(a, b);
     });
 
+    // Verify results
+    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
     double result_threads = parallel_inner_product_threads(a, b);
-
+   
     EXPECT_DOUBLE_EQ(expected, result_threads);
 
-    std::cout << "\nAverage execution time for Threads (ms): " << threads_time << "\n";
+    // Print timing results
+    std::cout << "\nAverage execcution times (ms) over 10 runs:\n"
+                << "Standard inner_product: " << std_time << " ms\n"
+                << "Parallel threads: " << threads_time << " ms\n";  
 }
 
 // Large Vectors Test for OpenMP
@@ -78,17 +86,23 @@ TEST(InnerProductTest, LargeVectorsTest_OpenMP) {
     size_t n = 1000000;
     std::vector<double> a(n, 1.0);
     std::vector<double> b(n, 2.0);
-
-    // TODO: Implement large vectors test for parallel_inner_product_openmp
-    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+    
+    // Measure execution times
+    double std_time = measure_time([&]() {
+        std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
+    });
 
     double openmp_time = measure_time([&]() {
         parallel_inner_product_openmp(a, b);
     });
-
+    // Verify results
+    double expected = std::inner_product(a.begin(), a.end(), b.begin(), 0.0);
     double result_openmp = parallel_inner_product_openmp(a, b);
 
     EXPECT_DOUBLE_EQ(expected, result_openmp);
 
-    std::cout << "\nAverage execution time for OpenMP (ms): " << openmp_time << "\n";
+    // Print timing results
+    std::cout << "\nAverage execcution times (ms) over 10 runs:\n"
+                << "Standard inner_product: " << std_time << " ms\n"
+                << "Parallel OpenMP: " << openmp_time << " ms\n";
 }

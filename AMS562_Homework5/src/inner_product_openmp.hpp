@@ -17,8 +17,8 @@ T parallel_inner_product_openmp(const std::vector<T>& a,
   }
 
   T result = T(0);
-  size_t n = a.size();
-  unsigned int num_threads = omp_get_max_threads();
+  const size_t n = a.size();
+  const unsigned int num_threads = omp_get_max_threads();
   size_t chunk_size = (n + num_threads - 1) / num_threads;  // Ceiling division
 
   if (n == 0) return result; // Handle empty vectors
